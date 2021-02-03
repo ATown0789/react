@@ -1,27 +1,55 @@
 // import logo from './logo.svg';
 import {useState} from 'react';
-
-import logo from './tek_logo.png';
 import './App.css';
 import Todo from './Components/Todo';
 
+function TodoForm({addTodo}) {
+  const [value, setValue] = useState('');
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    addTodo(value);
+    setValue('');
+  }
+
+  return(
+    <form onSubmit = {handleSubmit}>
+      <input 
+        className = "input"
+        type = "text"
+        value = {value}
+        onChange = {e => setValue(e.target.value)}></input>
+      <button type = "submit" value = "submit">Add Todo</button>
+  </form>
+  )
+}
+
 function App() {
 
-  const [todos, setTodos] = useState(["eat","sleep","code","pray","repeat"]);  //sample todo items.  these will need to be changed in your app.  Just filler todos, although they are quite important!
+  const [todoList, setTodoList] = useState(
+    [{
+      text: "my todo1",
+      completed: false
+    },
+    {
+      text: "my todo 2",
+      completed: true
+    }  
+  ]); 
+
+   
+  const addTodo = todoText => {
+    const newTodoList = [...todoList, {todoText}];
+    setTodoList(newTodoList);
+  }
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div>
-         <br/>
-          <p>Create a Todo List App</p>
-          <Todo item="1"/>
-          <Todo item="2"/>
-          <Todo item="3"/>
-          {todos.map( (t,i) => <Todo key={i} item={t}/>)}
-        </div>
-      </header>
+          <h1>My Todo List</h1>
+          <TodoForm addTodo = {addTodo} />
+          {todoList.map((todo, index) => (
+            <Todo key = {index} todo = {todo}  />
+          ))}
     </div>
   );
 }
