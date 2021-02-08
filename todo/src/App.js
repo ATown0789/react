@@ -20,9 +20,12 @@ function App() {
     }  
   ]); 
 
+
+  let newId = 0;
    
   const addTodo = text => {
-    const newId = todoList[todoList.length-1].id+1;
+    todoList.length < 1 ?  newId = 0 :
+    newId = todoList[todoList.length-1].id+1;
     const newTodoList = [...todoList, {text, id:newId}];
     setTodoList(newTodoList);
   }
@@ -47,13 +50,13 @@ function App() {
     from: {opacity:0},
     enter: {opacity: 1},
     leave: {opacity: 0},
-    config: {duration: 1000}
+    config: {duration: 600}
   });
   
   const delAnimation = useSpring(
     {opacity: 1, 
       from: {opacity: 0},
-      config: {duration: 1000}
+      config: {duration: 600}
     });
 
   return (
