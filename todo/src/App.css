@@ -28,45 +28,29 @@ form button {
   background: rgb(1, 0, 41);
 }
 
-#label {
-  display: flex;
-  border-bottom: 1px solid rgb(1, 0, 41);
-}
-
-#label :first-child {
-  margin-left: 10px;
-}
-
-#label :nth-child(2) {
-  margin: 12px 25px 12px auto;
-}
-
-#label :last-child {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
 .todo {
   font-size: 1.8em;
   padding: 10px;
   margin: 8px;
   display: flex;
+  word-break: break-word;
 }
 
 #completed {
-  margin: 8px 25px 8px auto;
   width: 20px;
   height: 20px;
+  margin-right: 20px;
 }
 
 
 .todo button {
   font-size: 1em;
-  padding: 8px;
-  margin-left: 70px;
+  height: 40px;
+  width: 40px;
+  margin-left: auto;
 }
 
-#todo-text {
+#input-text {
   margin: 15px;
   padding:8px;
   font-size: 1.8em;
@@ -80,5 +64,12 @@ button {
   border-radius: 10px;
   background: black;
   color: darkgray;
+}
+
+#todo-text {
+  text-align: left;
+  overflow-y: auto;
+  max-height: 30px;
+  max-width: 260px;
 }
 

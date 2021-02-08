@@ -5,10 +5,9 @@ import '../App.css';
 function Todo({todo, index, completeTodo, removeTodo}) {
     return (
         <div style = {{textDecoration: todo.completed ? 'line-through' : ''}} className = "todo">
-            {todo.text}
             <input id = "completed" name = "completed" type = "checkbox" onClick = {() => completeTodo(index)}/>
+            <span id ="todo-text">{todo.text}</span>
             <button onClick = {() => removeTodo(index)}><i class="fas fa-trash-alt"></i></button>
-
         </div>
     )
 }

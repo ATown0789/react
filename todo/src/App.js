@@ -39,11 +39,6 @@ function App() {
     <div className="App">
           <h1>My Todo List</h1>
           <TodoForm addTodo = {addTodo} />
-          <div id = "label">
-            <h2>Todo</h2>
-            <h2>Completed?</h2>
-            <h2>Delete</h2>
-          </div>
           {todoList.map((todo, index) => (
             <Todo removeTodo = {removeTodo} completeTodo = {completeTodo} index = {index} key = {index} todo = {todo}  />
           ))}

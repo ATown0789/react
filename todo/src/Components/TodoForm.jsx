@@ -20,7 +20,7 @@ function TodoForm({addTodo}) {
       <form onSubmit = {handleSubmit}>
         <input
           autoComplete = "off"
-          id = "todo-text" 
+          id = "input-text" 
           ref = {inputRef}
           className = "input"
           placeholder = "Add your todo..."
