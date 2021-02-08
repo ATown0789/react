@@ -1,38 +1,84 @@
+html {
+  background: rgb(44, 44, 44);
+  font-size : 62.5%;
+  color: darkgray;
+}
+
+
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgb(0, 70, 0);
+  width: 400px;
+  margin: 100px auto;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+  background: rgb(0, 49, 0);
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form button {
+  font-size: 1.6em;
+  padding: 10px;
+  background: rgb(1, 0, 41);
 }
+
+#label {
+  display: flex;
+  border-bottom: 1px solid rgb(1, 0, 41);
+}
+
+#label :first-child {
+  margin-left: 10px;
+}
+
+#label :nth-child(2) {
+  margin: 12px 25px 12px auto;
+}
+
+#label :last-child {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.todo {
+  font-size: 1.8em;
+  padding: 10px;
+  margin: 8px;
+  display: flex;
+}
+
+#completed {
+  margin: 8px 25px 8px auto;
+  width: 20px;
+  height: 20px;
+}
+
+
+.todo button {
+  font-size: 1em;
+  padding: 8px;
+  margin-left: 70px;
+}
+
+#todo-text {
+  margin: 15px;
+  padding:8px;
+  font-size: 1.8em;
+  background: rgb(44, 44, 44);
+  color: darkgray;
+  border-color: rgb(44, 44, 44);
+}
+
+button {
+  border: 1px solid darkblue;
+  border-radius: 10px;
+  background: black;
+  color: darkgray;
+}
+

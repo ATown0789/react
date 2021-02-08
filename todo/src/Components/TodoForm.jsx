@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState, useRef, useEffect} from 'react';
+import '../App.css';
 
 function TodoForm({addTodo}) {
     const [value, setValue] = useState('');
@@ -17,7 +18,9 @@ function TodoForm({addTodo}) {
   
     return(
       <form onSubmit = {handleSubmit}>
-        <input 
+        <input
+          autoComplete = "off"
+          id = "todo-text" 
           ref = {inputRef}
           className = "input"
           placeholder = "Add your todo..."
