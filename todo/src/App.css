@@ -73,3 +73,21 @@ button {
   max-width: 260px;
 }
 
+.delete {
+  background: rgb(97, 0, 0);
+  border: none;
+  box-shadow: 0 5px 5px rgb(0, 49, 0);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#del-all {
+  width: 50%;
+  margin: auto;
+  height: 40px;
+  font-size: 2em;
+  font-weight: 600;
+}
+
