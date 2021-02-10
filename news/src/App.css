@@ -1,5 +1,21 @@
+body {
+  background-color: #282c34;
+}
+
+article {
+  max-width: 80%;
+  margin: auto;
+}
+
+.politics section {
+  width: 80%;
+  word-break: break-all;
+}
+
 .App {
   text-align: center;
+  max-width: 80%;
+  margin: auto;
 }
 
 nav {
@@ -7,15 +23,14 @@ nav {
 }
 
 ul {
-  display : flex;
+  display: flex;
   justify-content: space-evenly;
 }
 
 a {
-  color : orange;
+  color: orange;
   text-decoration: none;
 }
-
 
 li {
   list-style: none;
@@ -55,4 +70,8 @@ li {
   to {
     transform: rotate(360deg);
   }
+}
+
+img {
+  max-width: 60%;
 }
